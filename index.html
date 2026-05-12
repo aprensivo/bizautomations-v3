@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 30-Minute Admin Audit | BizAutomations — Kent</title>
+  <meta name="description" content="Free 30-minute call. I'll find 5+ hours of automatable admin in your business, or I'll send you a £5 coffee voucher. Kent-based. No technical knowledge needed.">
+  <link rel="canonical" href="https://bizautomations.co.uk/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizautomations.co.uk/">
+  <meta property="og:title" content="The 30-Minute Admin Audit | BizAutomations — Kent">
+  <meta property="og:description" content="Find 5+ hours of automatable admin in your business in 30 minutes. Or get paid for the call.">
+  <meta property="og:image" content="https://bizautomations.co.uk/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BizAutomations",
+    "description": "Custom workflow automation for small businesses in Kent. Free 30-minute Admin Audit.",
+    "url": "https://bizautomations.co.uk",
+    "telephone": "07921134060",
+    "email": "hello@bizautomations.co.uk",
+    "address": { "@type": "PostalAddress", "addressRegion": "Kent", "addressCountry": "GB" },
+    "areaServed": { "@type": "State", "name": "Kent, England" },
+    "priceRange": "££",
+    "makesOffer": {
+      "@type": "Offer",
+      "name": "30-Minute Admin Audit",
+      "price": "0",
+      "priceCurrency": "GBP"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== TOKENS ===== */
+    :root {
+      --navy:        #081D34;
+      --sand:        #F5F3E6;
+      --orange:      #FF4F00;
+      --charcoal:    #1D1C1D;
+      --white:       #FCFCFD;
+      --muted:       rgba(252,252,253,0.78);
+      --quiet:       rgba(252,252,253,0.62);
+      --card-dark:   #0F2742;
+      --border-dark: rgba(252,252,253,0.12);
+
+      --font-head: 'DM Sans', sans-serif;
+      --font-body: 'Source Sans 3', sans-serif;
+
+      --h1:    clamp(2.25rem, 6vw + 1rem, 4rem);
+      --h2:    clamp(1.75rem, 4vw + 0.75rem, 2.75rem);
+      --h3:    clamp(1.25rem, 2vw + 0.75rem, 1.5rem);
+      --body:  clamp(1.0625rem, 0.5vw + 1rem, 1.125rem);
+      --small: clamp(0.9375rem, 0.2vw + 0.9rem, 1rem);
+
+      --pad-v:  clamp(3.5rem, 6vw, 6rem);
+      --gutter: 20px;
+      --r-card: 12px;
+      --r-btn:  8px;
+      --r-field: 6px;
+
+      --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: var(--body);
+      line-height: 1.6;
+      color: var(--charcoal);
+      background: var(--navy);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img, svg { display: block; }
+
+    /* ===== ACCESSIBILITY ===== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--orange);
+      color: var(--white);
+      padding: 12px 20px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 15px;
+      z-index: 10000;
+      text-decoration: none;
+      border-radius: 0 0 var(--r-btn) 0;
+    }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+    /* ===== LAYOUT ===== */
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+    .section-pad { padding-top: var(--pad-v); padding-bottom: var(--pad-v); }
+
+    /* ===== TYPOGRAPHY ===== */
+    .eyebrow {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .section-h2 {
+      font-family: var(--font-head);
+      font-size: var(--h2);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+    .section-h2.on-dark { color: var(--white); }
+
+    /* ===== NOISE OVERLAY ===== */
+    .noise-layer {
+      position: absolute;
+      inset: 0;
+      background-image: var(--noise);
+      background-size: 256px 256px;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 64px;
+      padding: 0 var(--gutter);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .nav.scrolled {
+      background: rgba(8,29,52,0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+    .nav-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      height: 40px;
+      padding: 0 16px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      border-radius: var(--r-btn);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-nav:hover { background: #e54500; transform: translateY(-1px); }
+    .btn-nav:active { transform: scale(0.98); }
+    @media (min-width: 768px) {
+      .nav { height: 72px; }
+      .btn-nav { height: 44px; font-size: 15px; padding: 0 20px; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: var(--navy);
+      overflow: hidden;
+      padding-top: 80px;
+    }
+    @media (min-width: 768px) { .hero { padding-top: 88px; } }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px var(--gutter) 72px;
+    }
+    @media (min-width: 768px) {
+      .hero-inner { text-align: center; }
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: var(--h1);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 38ch;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) { .hero-sub { margin-left: auto; margin-right: auto; } }
+
+    /* Power Trio */
+    .power-trio {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 480px) {
+      .power-trio { flex-direction: row; flex-wrap: wrap; }
+    }
+    @media (min-width: 768px) { .power-trio { justify-content: center; } }
+
+    .trio-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      height: 48px;
+      padding: 0 18px;
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 999px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .trio-chip i { font-size: 18px; color: var(--orange); flex-shrink: 0; }
+
+    /* Hero CTA block */
+    .hero-cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    @media (min-width: 768px) { .hero-cta-block { align-items: center; } }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 56px;
+      padding: 0 28px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      border-radius: var(--r-btn);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { background: #e54500; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,79,0,0.35); }
+    .btn-primary:active { transform: scale(0.98); }
+    @media (min-width: 768px) { .btn-primary { width: auto; min-width: 280px; } }
+
+    .hero-sub-cta {
+      font-size: var(--small);
+      color: var(--quiet);
+      text-align: center;
+      width: 100%;
+    }
+    .hero-phone {
+      font-size: var(--small);
+      color: var(--muted);
+    }
+    .hero-phone a { text-decoration: underline; text-underline-offset: 2px; }
+    .hero-phone a:hover { color: var(--white); }
+
+    /* ===== SECTION 2: WHAT YOU GET ===== */
+    .what-you-get { background: var(--sand); }
+
+    .section-head { margin-bottom: 40px; }
+    .section-sub {
+      font-size: 17px;
+      color: var(--charcoal);
+      opacity: 0.8;
+      max-width: 56ch;
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+    .section-sub.on-dark { color: var(--muted); opacity: 1; }
+
+    .deliverable-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      .deliverable-grid { flex-direction: row; }
+      .deliverable-grid .card { flex: 1; }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--r-card);
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(8,29,52,0.06);
+    }
+    .card-icon {
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .card-tag {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .card-body {
+      font-size: 17px;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .card-value {
+      font-size: var(--small);
+      font-weight: 600;
+      color: var(--charcoal);
+      opacity: 0.6;
+    }
+
+    .value-banner-wrap { display: flex; justify-content: center; }
+    .value-banner {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 16px;
+      padding: 14px 24px;
+      background: #EDEAD8;
+      border-radius: 999px;
+      font-size: var(--small);
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .value-banner span + span::before {
+      content: '·';
+      margin-right: 16px;
+    }
+    @media (max-width: 480px) {
+      .value-banner { border-radius: 12px; gap: 4px 0; flex-direction: column; }
+      .value-banner span + span::before { content: none; margin: 0; }
+    }
+
+    /* ===== SECTION 3: PROBLEM ===== */
+    .problem { position: relative; overflow: hidden; background: var(--navy); }
+
+    .problem-body {
+      font-size: 18px;
+      color: var(--white);
+      line-height: 1.7;
+      max-width: 42ch;
+      margin-bottom: 40px;
+    }
+    .problem-body p + p { margin-top: 1em; }
+
+    .stats-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 768px) { .stats-grid { flex-direction: row; } }
+
+    .stat-card {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--r-card);
+      padding: 28px 24px;
+      flex: 1;
+    }
+    .stat-number {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 1024px) { .stat-number { font-size: 64px; } }
+    .stat-label {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ===== SECTION 4: WHAT I'VE BUILT ===== */
+    .what-ive-built { background: var(--sand); }
+
+    .built-group { margin-bottom: 40px; }
+    .built-group:last-of-type { margin-bottom: 0; }
+
+    .group-header {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(8,29,52,0.12);
+    }
+
+    .built-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .built-cards { display: grid; grid-template-columns: repeat(2,1fr); }
+      .built-cards.three .built-card:last-child { grid-column: 1 / -1; }
+    }
+    @media (min-width: 1024px) {
+      .built-cards.three { grid-template-columns: repeat(3,1fr); }
+      .built-cards.three .built-card:last-child { grid-column: auto; }
+    }
+
+    .built-card {
+      background: #fff;
+      border: 1px solid rgba(8,29,52,0.08);
+      border-radius: var(--r-card);
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(8,29,52,0.05);
+    }
+    .built-card .card-icon { font-size: 28px; color: var(--navy); margin-bottom: 12px; display: block; }
+    .built-card .card-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
+    .built-card .card-body { font-size: 16px; color: rgba(29,28,29,0.85); line-height: 1.5; margin-bottom: 0; }
+
+    .built-footnote {
+      text-align: center;
+      font-size: var(--small);
+      font-style: italic;
+      color: rgba(29,28,29,0.65);
+      margin-top: 32px;
+    }
+
+    /* ===== SECTION 5: WHAT I FIND ===== */
+    .what-i-find { position: relative; overflow: hidden; background: var(--navy); }
+
+    .findings-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .findings-grid { display: grid; grid-template-columns: repeat(2,1fr); }
+    }
+
+    .finding-card {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--r-card);
+      padding: 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    @media (min-width: 1024px) {
+      .finding-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    }
+    .finding-num {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .finding-card .card-icon { font-size: 24px; color: rgba(252,252,253,0.65); margin-bottom: 10px; display: block; }
+    .finding-card .card-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .finding-card .card-body { font-size: 17px; color: var(--muted); line-height: 1.6; margin-bottom: 0; }
+
+    /* ===== SECTION 6: ABOUT ===== */
+    .about { background: var(--sand); }
+
+    .about-body {
+      font-size: 17px;
+      color: var(--charcoal);
+      line-height: 1.7;
+      max-width: 56ch;
+      margin-bottom: 32px;
+    }
+    .about-body p + p { margin-top: 1em; }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 8px;
+    }
+    @media (min-width: 600px) {
+      .trust-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 44px;
+      padding: 0 16px;
+      background: var(--sand);
+      border: 1px solid rgba(29,28,29,0.2);
+      border-radius: 999px;
+      font-size: var(--small);
+      font-weight: 600;
+      color: var(--charcoal);
+      white-space: nowrap;
+    }
+    .badge i { font-size: 16px; color: var(--charcoal); flex-shrink: 0; }
+
+    /* ===== SECTION 7: BOOK THE AUDIT ===== */
+    .book-audit { position: relative; overflow: hidden; background: var(--navy); }
+
+    .book-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 768px) {
+      .book-layout { flex-direction: row; gap: 64px; align-items: flex-start; }
+      .book-offer { flex: 0 0 360px; }
+      .book-form { flex: 1; }
+    }
+
+    .book-h2 {
+      font-family: var(--font-head);
+      font-size: var(--h2);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+    .book-capacity {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 24px;
+    }
+
+    .guarantee-box {
+      background: #06182C;
+      border-radius: var(--r-card);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .guarantee-block { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--border-dark); }
+    .guarantee-block:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+    .guarantee-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .guarantee-head i { font-size: 20px; color: var(--orange); }
+    .guarantee-label {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+    .guarantee-copy { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    .pricing-line { font-size: var(--small); color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
+
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      font-size: 17px;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .contact-item:hover { color: var(--orange); }
+    .contact-item i { font-size: 20px; flex-shrink: 0; }
+
+    /* Form */
+    .form-heading {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .form-sub-line { font-size: var(--small); color: var(--muted); margin-bottom: 28px; }
+
+    .form-group { margin-bottom: 20px; }
+    .form-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: var(--small);
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .form-label .req { color: var(--orange); margin-left: 2px; }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: rgba(252,252,253,0.06);
+      border: 1px solid rgba(252,252,253,0.18);
+      border-radius: var(--r-field);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 17px;
+      padding: 14px 16px;
+      transition: border-color 0.15s, background 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-input { height: 52px; }
+    .form-textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: rgba(252,252,253,0.45); }
+    .form-input:focus,
+    .form-textarea:focus { outline: none; border-color: var(--orange); background: rgba(252,252,253,0.09); }
+
+    .btn-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 56px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 17px;
+      border: none;
+      border-radius: var(--r-btn);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+      margin-bottom: 16px;
+    }
+    .btn-submit:hover:not(:disabled) { background: #e54500; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,79,0,0.35); }
+    .btn-submit:active:not(:disabled) { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .form-note { font-size: var(--small); color: var(--quiet); line-height: 1.5; }
+
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      padding: 48px 24px;
+    }
+    .form-success i { font-size: 48px; color: #22c55e; }
+    .form-success-msg { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--white); }
+
+    .form-error {
+      display: none;
+      font-size: var(--small);
+      color: #ff6b6b;
+      margin-top: 12px;
+      text-align: center;
+    }
+    .form-error a { color: inherit; text-decoration: underline; }
+
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%      { transform: translateX(-6px); }
+      40%      { transform: translateX(6px); }
+      60%      { transform: translateX(-4px); }
+      80%      { transform: translateX(4px); }
+    }
+    .shaking { animation: shake 0.4s ease; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #080808;
+      padding: 32px var(--gutter);
+      text-align: center;
+    }
+    @media (min-width: 768px) { footer { padding: 48px var(--gutter); } }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: var(--small);
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    .footer-inner a { text-decoration: none; color: var(--muted); }
+    .footer-inner a:hover { color: var(--white); text-decoration: underline; }
+    .footer-links { display: flex; gap: 16px; justify-content: center; margin-top: 12px; }
+
+    /* ===== STICKY MOBILE CTA ===== */
+    .sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 12px;
+      left: 16px;
+      right: 16px;
+      height: 56px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: var(--r-btn);
+      border: none;
+      cursor: pointer;
+      z-index: 900;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .sticky-bar.show { opacity: 1; transform: none; }
+    @media (max-width: 767px) { .sticky-bar { display: flex; } }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/" class="wordmark" aria-label="BizAutomations — home">BizAutomations</a>
+        <a href="#book" class="btn-nav">Book audit <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section class="hero" aria-labelledby="hero-h1">
+      <div class="noise-layer" aria-hidden="true"></div>
+      <div class="hero-inner">
+
+        <span class="eyebrow">Free 30-Min Admin Audit · Kent</span>
+
+        <h1 id="hero-h1">Find 5+ hours of automatable admin in your business. Or get paid for the call.</h1>
+
+        <p class="hero-sub">In one 30-minute call I'll map the manual work in your business that a system should be handling. You leave with a written plan within 24 hours. If I can't find 5 hours, you keep my time and a £5 coffee voucher.</p>
+
+        <div class="power-trio" role="list">
+          <div class="trio-chip" role="listitem">
+            <i class="ri-time-line" aria-hidden="true"></i>
+            <span>30 minutes</span>
+          </div>
+          <div class="trio-chip" role="listitem">
+            <i class="ri-shield-check-line" aria-hidden="true"></i>
+            <span>£5 if no value</span>
+          </div>
+          <div class="trio-chip" role="listitem">
+            <i class="ri-tools-line" aria-hidden="true"></i>
+            <span>System live ~21 days</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-block">
+          <a href="#book" class="btn-primary">
+            Book My Admin Audit <i class="ri-arrow-right-line" aria-hidden="true"></i>
+          </a>
+          <p class="hero-sub-cta" id="hero-cap-line">30 min · Free · Guaranteed · 1 spot left in May</p>
+          <p class="hero-phone">Or call: <a href="tel:07921134060">07921 134 060</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: WHAT YOU GET ===== -->
+    <section class="what-you-get section-pad" aria-labelledby="get-h2">
+      <div class="wrap">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">What's included</span>
+          <h2 class="section-h2" id="get-h2">Three deliverables. Free regardless of whether you hire me.</h2>
+        </div>
+
+        <div class="deliverable-grid">
+          <div class="card reveal">
+            <i class="ri-chat-3-line card-icon" aria-hidden="true"></i>
+            <span class="card-tag">In the 30 min</span>
+            <h3 class="card-title">The Audit Call</h3>
+            <p class="card-body">I find ≥5 hours of automatable admin in your week — or you keep my time and a £5 coffee voucher.</p>
+            <p class="card-value">Value: priceless if it works. £5 to you if it doesn't.</p>
+          </div>
+
+          <div class="card reveal">
+            <i class="ri-file-list-3-line card-icon" aria-hidden="true"></i>
+            <span class="card-tag">Within 24 hours</span>
+            <h3 class="card-title">Written Admin Map (PDF)</h3>
+            <p class="card-body">Every automatable task in your business, ranked by hours saved per month. Yours to keep whether you hire me or take it to someone else.</p>
+            <p class="card-value">Stated value: £150</p>
+          </div>
+
+          <div class="card reveal">
+            <i class="ri-tools-line card-icon" aria-hidden="true"></i>
+            <span class="card-tag">If you go ahead</span>
+            <h3 class="card-title">Build + 30-day support</h3>
+            <p class="card-body">System live in ~21 days. Saves the hours we agreed in the audit or I fix it free. Typical builds: £500 – £2,500.</p>
+            <p class="card-value">Plus: 30-min post-launch Q&A (£200 value) if you book the audit this month.</p>
+          </div>
+        </div>
+
+        <div class="value-banner-wrap reveal">
+          <div class="value-banner">
+            <span>Total stated value: £400</span>
+            <span>Cost to you: £0</span>
+            <span id="s2-spots">Spots in May: 1 remaining</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: PROBLEM ===== -->
+    <section class="problem section-pad" aria-labelledby="problem-h2">
+      <div class="noise-layer" aria-hidden="true"></div>
+      <div class="wrap" style="position:relative;z-index:1">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Why this matters</span>
+          <h2 class="section-h2 on-dark" id="problem-h2">The work that follows you home.</h2>
+        </div>
+
+        <div class="problem-body reveal">
+          <p>Most small businesses in Kent run on spreadsheets, email inboxes, and memory. It works — until it doesn't.</p>
+          <p>It isn't just the hours you can count. It's the quote you forgot to follow up. The invoice that went out three days late. The Saturday morning you spent sending follow-up emails instead of being somewhere else.</p>
+          <p>Admin doesn't stay in the office. It follows you home.</p>
+          <p>The audit finds the parts a system should be doing instead.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <span class="stat-number" id="stat-hours">10+ hrs</span>
+            <p class="stat-label">Lost to admin every week — average Kent sole trader</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number">Sat 9am</span>
+            <p class="stat-label">The hour most owners catch up on the admin they couldn't do during the week</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: WHAT I'VE BUILT ===== -->
+    <section class="what-ive-built section-pad" aria-labelledby="built-h2">
+      <div class="wrap">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Shipped systems</span>
+          <h2 class="section-h2" id="built-h2">Systems already running in real businesses.</h2>
+          <p class="section-sub">These aren't case studies with quotes I haven't earned yet. They're systems I've built and shipped — some in my day job, some for a trader I know. Each one is doing the kind of work the audit looks for.</p>
+        </div>
+
+        <div class="built-group">
+          <h3 class="group-header reveal">At my current job — internal tools shipped</h3>
+          <div class="built-cards">
+            <div class="built-card reveal">
+              <i class="ri-file-list-3-line card-icon" aria-hidden="true"></i>
+              <h4 class="card-title">Invoice handling, end to end</h4>
+              <p class="card-body">Files invoices, pulls the data off them, and pushes the right info into the systems that need it. No one types invoices anymore.</p>
+            </div>
+            <div class="built-card reveal">
+              <i class="ri-customer-service-2-line card-icon" aria-hidden="true"></i>
+              <h4 class="card-title">AI customer service agent</h4>
+              <p class="card-body">A conversational AI that talks to customers, answers questions, and handles the usual incoming queries without a human stepping in.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="built-group">
+          <h3 class="group-header reveal">For a trading business — full operational stack</h3>
+          <div class="built-cards three">
+            <div class="built-card reveal">
+              <i class="ri-chat-forward-line card-icon" aria-hidden="true"></i>
+              <h4 class="card-title">Multi-platform offer-drafting agent</h4>
+              <p class="card-body">One chat agent that works across the website, WhatsApp, and Facebook. Drafts offers to customers wherever the conversation lives.</p>
+            </div>
+            <div class="built-card reveal">
+              <i class="ri-price-tag-3-line card-icon" aria-hidden="true"></i>
+              <h4 class="card-title">Hardware supplier price scraper</h4>
+              <p class="card-body">Pulls live prices from hardware suppliers so the business always quotes against current costs, not last month's.</p>
+            </div>
+            <div class="built-card reveal">
+              <i class="ri-archive-2-line card-icon" aria-hidden="true"></i>
+              <h4 class="card-title">Materials inventory system</h4>
+              <p class="card-body">Tracks what's in stock, what's running low, and what needs ordering — across the materials the business actually uses.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="built-footnote reveal">Same patterns repeat across most small businesses. The audit finds yours.</p>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: WHAT I FIND ===== -->
+    <section class="what-i-find section-pad" aria-labelledby="findings-h2">
+      <div class="noise-layer" aria-hidden="true"></div>
+      <div class="wrap" style="position:relative;z-index:1">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Common findings</span>
+          <h2 class="section-h2 on-dark" id="findings-h2">What the audit usually finds.</h2>
+          <p class="section-sub on-dark">These are the systems we end up building most often. Yours will probably look different — that's what the call is for.</p>
+        </div>
+
+        <div class="findings-grid">
+
+          <div class="finding-card reveal">
+            <span class="finding-num">01</span>
+            <i class="ri-file-list-3-line card-icon" aria-hidden="true"></i>
+            <h3 class="card-title">Invoice & Payment Chasing</h3>
+            <p class="card-body">Automatic reminders at the right intervals. Day 7, 14, 30 — politely, consistently, without you remembering.</p>
+          </div>
+
+          <div class="finding-card reveal">
+            <span class="finding-num">02</span>
+            <i class="ri-phone-missed-line card-icon" aria-hidden="true"></i>
+            <h3 class="card-title">Missed-Call Lead Capture</h3>
+            <p class="card-body">Miss a call on a job? The caller gets a text within 60 seconds. You capture the lead before they ring your competitor.</p>
+          </div>
+
+          <div class="finding-card reveal">
+            <span class="finding-num">03</span>
+            <i class="ri-message-2-line card-icon" aria-hidden="true"></i>
+            <h3 class="card-title">Customer Follow-Up Systems</h3>
+            <p class="card-body">Post-job check-ins, review requests, seasonal touch-points — sent automatically at the right moment.</p>
+          </div>
+
+          <div class="finding-card reveal">
+            <span class="finding-num">04</span>
+            <i class="ri-database-2-line card-icon" aria-hidden="true"></i>
+            <h3 class="card-title">Data Entry & Reporting</h3>
+            <p class="card-body">Enter it once, use it everywhere. Quotes flow to invoices flow to records. Weekly summaries built automatically.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: ABOUT ===== -->
+    <section class="about section-pad" aria-labelledby="about-h2">
+      <div class="wrap">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Who's behind this</span>
+          <h2 class="section-h2" id="about-h2">I'm Tom. Kent-based. I build the systems.</h2>
+        </div>
+
+        <div class="about-body reveal">
+          <p>I started BizAutomations because I kept watching small business owners — brilliant at their actual jobs — get buried in admin they should never have been doing.</p>
+          <p>I work across trades, professional services, and small teams in Kent. My number is on this page. If the audit wastes your time, you've got my email and a coffee voucher coming.</p>
+        </div>
+
+        <div class="trust-badges reveal">
+          <span class="badge"><i class="ri-map-pin-2-line" aria-hidden="true"></i>Kent-based</span>
+          <span class="badge"><i class="ri-shield-check-line" aria-hidden="true"></i>Insured from day one</span>
+          <span class="badge"><i class="ri-government-line" aria-hidden="true"></i>ICO registered</span>
+          <span class="badge"><i class="ri-calendar-check-line" aria-hidden="true"></i>Free consultation</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: BOOK THE AUDIT ===== -->
+    <section class="book-audit section-pad" id="book" aria-labelledby="book-h2">
+      <div class="noise-layer" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="book-layout">
+
+          <!-- Offer column -->
+          <div class="book-offer reveal">
+            <span class="eyebrow">Book your slot</span>
+            <h2 class="book-h2" id="book-h2">Book your May<br>Admin Audit.</h2>
+            <p class="book-capacity" id="book-cap-line">1 spot left in May. Next available: June.</p>
+
+            <div class="guarantee-box">
+              <div class="guarantee-block">
+                <div class="guarantee-head">
+                  <i class="ri-shield-check-line" aria-hidden="true"></i>
+                  <span class="guarantee-label">The guarantee</span>
+                </div>
+                <p class="guarantee-copy">If our 30-min call doesn't surface 5+ hours of automatable admin in your business, I'll send you a £5 coffee voucher. Unconditional.</p>
+              </div>
+              <div class="guarantee-block">
+                <div class="guarantee-head">
+                  <i class="ri-tools-line" aria-hidden="true"></i>
+                  <span class="guarantee-label">If you go ahead</span>
+                </div>
+                <p class="guarantee-copy">System live in ~21 days. Saves the hours we agreed in the audit, or I fix it free. Conditional on running it as-built for 30 days.</p>
+              </div>
+            </div>
+
+            <p class="pricing-line" id="pricing-line">Audit calls: free. Builds: typically £500 – £2,500. Quoted on the call. First 3 build clients this quarter get 25% off (offer ends 30 June 2026).</p>
+
+            <div class="contact-list">
+              <a href="mailto:hello@bizautomations.co.uk" class="contact-item">
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                hello@bizautomations.co.uk
+              </a>
+              <a href="tel:07921134060" class="contact-item">
+                <i class="ri-phone-line" aria-hidden="true"></i>
+                07921 134 060
+              </a>
+              <a href="https://www.linkedin.com/in/tomasz-gorecki-825b3784/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <i class="ri-linkedin-box-line" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Form column -->
+          <div class="book-form reveal">
+            <h3 class="form-heading">Reserve your audit slot.</h3>
+            <p class="form-sub-line">I reply within one business day.</p>
+
+            <div id="form-wrap">
+              <form id="audit-form" novalidate>
+
+                <div class="form-group">
+                  <label for="name" class="form-label">Your name <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="name" name="name" class="form-input" required aria-required="true"
+                    placeholder="Jane Smith" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="business" class="form-label">Business / role</label>
+                  <input type="text" id="business" name="business" class="form-input"
+                    placeholder="e.g. Plumber, accountant, café owner" autocomplete="organization">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact" class="form-label">Best way to reach you <span class="req" aria-label="required">*</span></label>
+                  <input type="text" id="contact" name="contact" class="form-input" required aria-required="true"
+                    placeholder="Phone or email" autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="problem" class="form-label">What's taking too long? <span class="req" aria-label="required">*</span></label>
+                  <textarea id="problem" name="problem" class="form-textarea" rows="4" required aria-required="true"
+                    placeholder="e.g. I spend 3 hours every Monday chasing invoices and entering the same data into two systems."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span id="btn-label">Reserve my audit slot</span>
+                  <i class="ri-arrow-right-line" aria-hidden="true" id="btn-arrow"></i>
+                </button>
+
+                <div class="form-error" id="form-error" role="alert">
+                  Couldn't send. Email me directly: <a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a>
+                </div>
+
+                <p class="form-note">I reply within one business day. No pitch. No commitment. If May is full, I'll offer you the first June slot.</p>
+              </form>
+            </div>
+
+            <div class="form-success" id="form-success" role="status" aria-live="polite">
+              <i class="ri-checkbox-circle-line" aria-hidden="true"></i>
+              <p class="form-success-msg">Sent. I'll be in touch within one business day.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 BizAutomations · Kent, England</p>
+      <p><a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a></p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <a href="#book" class="sticky-bar" id="sticky-bar">
+    Book My Admin Audit <i class="ri-arrow-right-line" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    /* ===== CAPACITY CONSTANTS — update monthly ===== */
+    const BIZ_CAPACITY = {
+      month:             "May",
+      monthShort:        "May",
+      spotsLeft:         1,
+      nextMonth:         "June",
+      buildDiscountEnds: "30 June 2026"
+    };
+
+    /* Populate all capacity references */
+    (function() {
+      const full     = BIZ_CAPACITY.spotsLeft === 0;
+      const m        = BIZ_CAPACITY.month;
+      const mShort   = BIZ_CAPACITY.monthShort;
+      const next     = BIZ_CAPACITY.nextMonth;
+      const spots    = BIZ_CAPACITY.spotsLeft;
+
+      const el = (id) => document.getElementById(id);
+
+      const heroCap = el('hero-cap-line');
+      if (heroCap) {
+        heroCap.textContent = full
+          ? `30 min · Free · Guaranteed · ${m} fully booked`
+          : `30 min · Free · Guaranteed · ${spots} spot left in ${mShort}`;
+      }
+
+      const bookCap = el('book-cap-line');
+      if (bookCap) {
+        bookCap.textContent = full
+          ? `${m} fully booked. Reserve your ${next} slot below.`
+          : `${spots} spot left in ${m}. Next available: ${next}.`;
+      }
+
+      const s2Spots = el('s2-spots');
+      if (s2Spots) {
+        s2Spots.textContent = full
+          ? `${m} fully booked`
+          : `Spots in ${mShort}: ${spots} remaining`;
+      }
+
+      const pricing = el('pricing-line');
+      if (pricing) {
+        pricing.textContent = `Audit calls: free. Builds: typically £500 – £2,500. Quoted on the call. First 3 build clients this quarter get 25% off (offer ends ${BIZ_CAPACITY.buildDiscountEnds}).`;
+      }
+    })();
+
+    /* ===== NAV SCROLL BEHAVIOUR ===== */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ===== SCROLL REVEAL ===== */
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+    /* ===== COUNT-UP ANIMATION ===== */
+    function countUp(el, target, suffix, dur) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const t0 = performance.now();
+      function tick(now) {
+        const p  = Math.min((now - t0) / dur, 1);
+        const ep = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ep * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const statsIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const hoursEl = document.getElementById('stat-hours');
+          if (hoursEl) countUp(hoursEl, 10, '+ hrs', 800);
+          statsIO.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid) statsIO.observe(statsGrid);
+
+    /* ===== STICKY MOBILE CTA ===== */
+    const stickyBar  = document.getElementById('sticky-bar');
+    const heroSec    = document.querySelector('.hero');
+    const bookSec    = document.getElementById('book');
+
+    if (stickyBar && heroSec && bookSec) {
+      let heroOut  = false;
+      let bookIn   = false;
+
+      function syncSticky() {
+        stickyBar.classList.toggle('show', heroOut && !bookIn);
+      }
+
+      new IntersectionObserver(([e]) => { heroOut = !e.isIntersecting; syncSticky(); }, { threshold: 0.1 })
+        .observe(heroSec);
+
+      new IntersectionObserver(([e]) => { bookIn = e.isIntersecting; syncSticky(); }, { threshold: 0.2 })
+        .observe(bookSec);
+    }
+
+    /* ===== FORM SUBMISSION ===== */
+    const auditForm = document.getElementById('audit-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnLabel  = document.getElementById('btn-label');
+    const btnArrow  = document.getElementById('btn-arrow');
+    const formWrap  = document.getElementById('form-wrap');
+    const formSucc  = document.getElementById('form-success');
+    const formErr   = document.getElementById('form-error');
+
+    if (auditForm) {
+      auditForm.addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+
+        const name    = document.getElementById('name').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const problem = document.getElementById('problem').value.trim();
+
+        if (!name || !contact || !problem) {
+          auditForm.classList.remove('shaking');
+          void auditForm.offsetWidth;
+          auditForm.classList.add('shaking');
+          auditForm.addEventListener('animationend', () => auditForm.classList.remove('shaking'), { once: true });
+          return;
+        }
+
+        /* Submitting state */
+        submitBtn.disabled = true;
+        btnLabel.textContent = 'Sending…';
+        btnArrow.style.display = 'none';
+        const spin = document.createElement('div');
+        spin.className = 'spinner';
+        submitBtn.appendChild(spin);
+        formErr.style.display = 'none';
+
+        const payload = {
+          name,
+          business: document.getElementById('business').value.trim(),
+          contact,
+          problem,
+          source:    'bizautomations-v3',
+          timestamp: new Date().toISOString()
+        };
+
+        try {
+          const res = await fetch('https://n8n.bizautomations.co.uk/webhook/biz-leads', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('non-2xx');
+
+          formWrap.style.display = 'none';
+          formSucc.style.display = 'flex';
+
+        } catch {
+          submitBtn.disabled = false;
+          btnLabel.textContent = 'Reserve my audit slot';
+          btnArrow.style.display = '';
+          spin.remove();
+
+          auditForm.classList.remove('shaking');
+          void auditForm.offsetWidth;
+          auditForm.classList.add('shaking');
+          auditForm.addEventListener('animationend', () => auditForm.classList.remove('shaking'), { once: true });
+          formErr.style.display = 'block';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
