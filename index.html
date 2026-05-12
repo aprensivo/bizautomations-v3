@@ -662,15 +662,22 @@
     .contact-item:hover { color: var(--orange); }
     .contact-item i { font-size: 20px; flex-shrink: 0; }
 
-    /* Form */
+    /* Form card */
+    .book-form {
+      background: var(--white);
+      border-radius: var(--r-card);
+      padding: 32px;
+      box-shadow: 0 8px 32px rgba(8,29,52,0.22);
+    }
+
     .form-heading {
       font-family: var(--font-head);
       font-size: 22px;
       font-weight: 700;
-      color: var(--white);
+      color: var(--charcoal);
       margin-bottom: 6px;
     }
-    .form-sub-line { font-size: var(--small); color: var(--muted); margin-bottom: 28px; }
+    .form-sub-line { font-size: var(--small); color: rgba(29,28,29,0.6); margin-bottom: 28px; }
 
     .form-group { margin-bottom: 20px; }
     .form-label {
@@ -678,7 +685,7 @@
       font-family: var(--font-body);
       font-size: var(--small);
       font-weight: 600;
-      color: var(--muted);
+      color: var(--charcoal);
       margin-bottom: 8px;
     }
     .form-label .req { color: var(--orange); margin-left: 2px; }
@@ -686,10 +693,10 @@
     .form-input,
     .form-textarea {
       width: 100%;
-      background: rgba(252,252,253,0.06);
-      border: 1px solid rgba(252,252,253,0.18);
+      background: var(--sand);
+      border: 1px solid rgba(8,29,52,0.18);
       border-radius: var(--r-field);
-      color: var(--white);
+      color: var(--charcoal);
       font-family: var(--font-body);
       font-size: 17px;
       padding: 14px 16px;
@@ -700,9 +707,9 @@
     .form-input { height: 52px; }
     .form-textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
     .form-input::placeholder,
-    .form-textarea::placeholder { color: rgba(252,252,253,0.45); }
+    .form-textarea::placeholder { color: rgba(29,28,29,0.38); }
     .form-input:focus,
-    .form-textarea:focus { outline: none; border-color: var(--orange); background: rgba(252,252,253,0.09); }
+    .form-textarea:focus { outline: none; border-color: var(--orange); background: #fff; }
 
     .btn-submit {
       display: flex;
@@ -736,7 +743,7 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    .form-note { font-size: var(--small); color: var(--quiet); line-height: 1.5; }
+    .form-note { font-size: var(--small); color: rgba(29,28,29,0.55); line-height: 1.5; }
 
     .form-success {
       display: none;
@@ -747,7 +754,7 @@
       padding: 48px 24px;
     }
     .form-success i { font-size: 48px; color: #22c55e; }
-    .form-success-msg { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--white); }
+    .form-success-msg { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--charcoal); }
 
     .form-error {
       display: none;
@@ -1014,7 +1021,7 @@
           <div class="finding-card reveal">
             <span class="finding-num">01</span>
             <i class="ri-file-list-3-line card-icon" aria-hidden="true"></i>
-            <h3 class="card-title">Invoice & Payment Chasing</h3>
+            <h3 class="card-title">Invoice &amp; Payment Chasing</h3>
             <p class="card-body">Automatic reminders at the right intervals. Day 7, 14, 30 — politely, consistently, without you remembering.</p>
           </div>
 
@@ -1035,7 +1042,7 @@
           <div class="finding-card reveal">
             <span class="finding-num">04</span>
             <i class="ri-database-2-line card-icon" aria-hidden="true"></i>
-            <h3 class="card-title">Data Entry & Reporting</h3>
+            <h3 class="card-title">Data Entry &amp; Reporting</h3>
             <p class="card-body">Enter it once, use it everywhere. Quotes flow to invoices flow to records. Weekly summaries built automatically.</p>
           </div>
 
