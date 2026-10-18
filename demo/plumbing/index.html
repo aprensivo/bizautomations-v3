@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kent Test Plumbing | Get a quote</title>
+  <meta name="theme-color" content="#0B4F8A">
+  <style>
+    :root {
+      --blue: #0B4F8A;
+      --blue-dark: #083A66;
+      --ink: #1B2430;
+      --muted: #5A6675;
+      --line: #C9D2DC;
+      --bg: #F4F7FA;
+      --card: #FFFFFF;
+      --ok: #1E7B45;
+      --ok-bg: #E8F5EE;
+      --bad: #B3261E;
+      --bad-bg: #FCECEA;
+      --note-bg: #FFF6DB;
+      --note-line: #E9CF7A;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
+      background: var(--blue);
+      color: #fff;
+      padding: 18px 16px 20px;
+    }
+    header h1 { margin: 0; font-size: 1.5rem; line-height: 1.2; }
+    header p { margin: 4px 0 0; opacity: 0.9; font-size: 1rem; }
+    main { max-width: 560px; margin: 0 auto; padding: 16px; }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    h2 { margin: 0 0 4px; font-size: 1.25rem; }
+    .intro { margin: 0 0 16px; color: var(--muted); }
+    label { display: block; font-weight: 600; margin: 16px 0 6px; }
+    label span { font-weight: 400; color: var(--muted); }
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      min-height: 50px;
+      padding: 12px;
+      font: inherit;
+      font-size: 17px;
+      color: var(--ink);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    textarea { min-height: 130px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid rgba(11,79,138,0.3); border-color: var(--blue); }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .notice {
+      margin: 20px 0 0;
+      padding: 12px;
+      background: var(--note-bg);
+      border: 1px solid var(--note-line);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    button {
+      display: block;
+      width: 100%;
+      min-height: 56px;
+      margin-top: 16px;
+      font: inherit;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--blue);
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:active { background: var(--blue-dark); }
+    button:disabled { opacity: 0.6; }
+    button.secondary { background: #fff; color: var(--blue); border: 2px solid var(--blue); }
+    .result { margin-top: 16px; padding: 16px; border-radius: 8px; }
+    .result.ok { background: var(--ok-bg); border: 1px solid var(--ok); }
+    .result.bad { background: var(--bad-bg); border: 1px solid var(--bad); }
+    .result h3 { margin: 0 0 8px; font-size: 1.125rem; }
+    .result p { margin: 0 0 8px; }
+    .result ul { margin: 0; padding-left: 20px; }
+    .ref {
+      display: block;
+      margin: 8px 0 12px;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      word-break: break-all;
+    }
+    footer { text-align: center; color: var(--muted); font-size: 0.875rem; padding: 8px 16px 28px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kent Test Plumbing</h1>
+    <p>Plumbing and heating, Maidstone</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <section id="form-view">
+        <h2>Ask for a quote</h2>
+        <p class="intro">Tell us about the job and we will email you a few quick questions so we can give you a rough price.</p>
+
+        <form id="enquiry" novalidate>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" autocapitalize="words">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false">
+
+          <label for="phone">Phone <span>(optional)</span></label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+
+          <label for="postcode">Postcode</label>
+          <input id="postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false">
+
+          <label for="job_type">Type of job</label>
+          <select id="job_type" name="job_type">
+            <option value="">Choose one</option>
+            <option value="boiler_service">Boiler service</option>
+            <option value="boiler_replacement">Boiler replacement</option>
+            <option value="leaking_tap_or_pipe">Leaking tap or pipe</option>
+            <option value="bathroom_refit">Bathroom refit</option>
+            <option value="radiator_install">Radiator install</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message">About the job</label>
+          <textarea id="message" name="message"></textarea>
+
+          <div class="hp" aria-hidden="true">
+            <label for="company_website">Leave this empty</label>
+            <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="notice">This is a demonstration with an invented firm. Details you send go to a test spreadsheet and are deleted within 7 days.</p>
+
+          <button id="send" type="submit">Send</button>
+        </form>
+
+        <div id="form-result" class="result bad" role="alert" hidden></div>
+      </section>
+
+      <section id="done-view" hidden>
+        <div id="done-result" class="result ok" role="status"></div>
+        <button id="again" type="button">Send another enquiry</button>
+        <button id="resend" class="secondary" type="button">Send the same enquiry again</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>Demo built by BizAutomations</footer>
+
+  <script>
+    var WEBHOOK = "https://n8n-dev.bizautomations.co.uk/webhook/demo-trades-enquiry";
+    var FIELDS = ["name", "email", "phone", "postcode", "job_type", "message", "company_website"];
+    var form = document.getElementById("enquiry");
+    var sendBtn = document.getElementById("send");
+    var formView = document.getElementById("form-view");
+    var doneView = document.getElementById("done-view");
+    var formResult = document.getElementById("form-result");
+    var doneResult = document.getElementById("done-result");
+    var lastBody = null;
+
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    function sandboxEmail() {
+      var d = new Date();
+      var stamp = d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + "-" + pad(d.getHours()) + pad(d.getMinutes()) + pad(d.getSeconds());
+      return "kenttestplumbing+demo-" + stamp + "@gmail.com";
+    }
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function readForm() {
+      var body = {};
+      FIELDS.forEach(function (f) { body[f] = form.elements[f].value; });
+      return body;
+    }
+    function showDone(html) {
+      doneResult.innerHTML = html;
+      formView.hidden = true;
+      doneView.hidden = false;
+      window.scrollTo(0, 0);
+    }
+    function showFormError(html) {
+      formResult.innerHTML = html;
+      formResult.hidden = false;
+      formResult.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function send(body) {
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Sending...";
+      formResult.hidden = true;
+      fetch(WEBHOOK, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+      }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) { return { code: res.status, data: data }; });
+      }).then(function (r) {
+        var d = r.data || {};
+        if (r.code === 200 && d.status === "received") {
+          lastBody = body;
+          showDone("<h3>Thanks, we have your enquiry</h3><p>Your reference is</p><span class=\"ref\">" + esc(d.reference) +
+            "</span><p>We have emailed you a few quick questions about the job. Please check your inbox.</p>");
+        } else if (r.code === 200 && d.status === "duplicate") {
+          lastBody = body;
+          showDone("<h3>We already have this enquiry</h3><p>You sent us the same enquiry a moment ago, so we have not logged it twice. Look out for our email.</p>");
+        } else if (r.code === 400 && d.errors) {
+          formView.hidden = false;
+          doneView.hidden = true;
+          showFormError("<h3>Please check these and send again</h3><ul>" +
+            d.errors.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>");
+        } else {
+          formView.hidden = false;
+          doneView.hidden = true;
+          showFormError("<h3>Sorry, something went wrong</h3><p>" + esc(d.message || "We could not send your enquiry. Please try again.") + "</p>");
+        }
+      }).catch(function () {
+        formView.hidden = false;
+        doneView.hidden = true;
+        showFormError("<h3>Could not send</h3><p>Please check your connection and try again.</p>");
+      }).then(function () {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send";
+      });
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      send(readForm());
+    });
+    document.getElementById("again").addEventListener("click", function () {
+      form.reset();
+      form.elements.email.value = sandboxEmail();
+      formResult.hidden = true;
+      doneView.hidden = true;
+      formView.hidden = false;
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("resend").addEventListener("click", function () {
+      if (lastBody) send(lastBody);
+    });
+
+    form.elements.email.value = sandboxEmail();
+  </script>
+</body>
+</html>
