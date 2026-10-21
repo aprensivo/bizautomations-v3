@@ -32,7 +32,7 @@
     "name": "BizAutomations",
     "description": "Done-for-you admin systems for Kent businesses that quote per job. 30-minute Admin Audit.",
     "url": "https://bizautomations.co.uk",
-    "telephone": "07921134060",
+    "telephone": "+447565345786",
     "email": "hello@bizautomations.co.uk",
     "address": { "@type": "PostalAddress", "addressRegion": "Kent", "addressCountry": "GB" },
     "areaServed": { "@type": "State", "name": "Kent, England" },
@@ -585,6 +585,25 @@
     }
     .badge i { font-size: 16px; color: var(--charcoal); flex-shrink: 0; }
 
+    /* ===== SECTION 6B: MONTHLY SUPPORT ===== */
+    .support { background: #EDEAD8; }
+    .tier-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+    @media (min-width: 900px) {
+      .tier-grid { flex-direction: row; align-items: stretch; }
+      .tier-grid .card { flex: 1; }
+    }
+    .tier-card { display: flex; flex-direction: column; border: 2px solid transparent; }
+    .tier-card.recommended { border-color: var(--orange); }
+    .tier-price { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--charcoal); line-height: 1.1; margin-bottom: 4px; }
+    .tier-price small { font-size: 16px; font-weight: 500; opacity: 0.7; }
+    .tier-list { list-style: none; margin: 16px 0 0; padding: 0; font-size: 16px; color: var(--charcoal); line-height: 1.5; }
+    .tier-list li { display: flex; gap: 8px; padding: 6px 0; border-top: 1px solid rgba(29,28,29,0.08); }
+    .tier-list li i { color: var(--orange); flex-shrink: 0; margin-top: 2px; }
+    .support-rules { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; max-width: 72ch; font-size: 16px; color: var(--charcoal); line-height: 1.6; }
+    .support-rules li { display: flex; gap: 10px; }
+    .support-rules li i { color: var(--navy); flex-shrink: 0; margin-top: 3px; }
+    .support-rules a { color: var(--charcoal); text-decoration: underline; text-underline-offset: 2px; }
+
     /* ===== SECTION 7: BOOK THE AUDIT ===== */
     .book-audit { position: relative; overflow: hidden; background: var(--navy); }
 
@@ -867,7 +886,7 @@
             Book My Admin Audit <i class="ri-arrow-right-line" aria-hidden="true"></i>
           </a>
           <p class="hero-sub-cta" id="hero-cap-line">30 min · No obligation · Kent-based</p>
-          <p class="hero-phone">Or call: <a href="tel:07921134060">07921 134 060</a></p>
+          <p class="hero-phone">Or call: <a href="tel:+447565345786">07565 345 786</a> · <a href="https://wa.me/447565345786" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
         </div>
 
       </div>
@@ -1000,6 +1019,70 @@
       </div>
     </section>
 
+    <!-- ===== SECTION 6B: MONTHLY SUPPORT ===== -->
+    <section class="support section-pad" id="support" aria-labelledby="support-h2">
+      <div class="wrap">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">After the build</span>
+          <h2 class="section-h2" id="support-h2">Monthly support. From £79 a month, no lock-in.</h2>
+          <p class="section-sub">Every build includes 30 days of support. After that, I can run it for you, keep an eye on it, and fix it when something changes. Pick the level that fits. You can change or stop any month.</p>
+        </div>
+
+        <div class="tier-grid">
+          <div class="card tier-card reveal">
+            <span class="card-tag">Essential</span>
+            <p class="tier-price">£79 <small>a month</small></p>
+            <p class="card-value">For one automation that just needs to keep working.</p>
+            <ul class="tier-list">
+              <li><i class="ri-check-line" aria-hidden="true"></i>1 live workflow</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Monitoring and error alerts</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Fixes when a connected app changes</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Reply within 2 working days</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Changes at £90 an hour</li>
+            </ul>
+          </div>
+
+          <div class="card tier-card recommended reveal">
+            <span class="card-tag">Standard · Recommended</span>
+            <p class="tier-price">£169 <small>a month</small></p>
+            <p class="card-value">For a business running a few automations.</p>
+            <ul class="tier-list">
+              <li><i class="ri-check-line" aria-hidden="true"></i>Up to 5 live workflows</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Everything in Essential</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Up to 1 hour of small changes a month</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>A one-line monthly report</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Reply within 1 working day</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Extra hours at £70 an hour</li>
+            </ul>
+          </div>
+
+          <div class="card tier-card reveal">
+            <span class="card-tag">Priority</span>
+            <p class="tier-price">£299 <small>a month</small></p>
+            <p class="card-value">For a business that relies on its automations every day. 4 places for now.</p>
+            <ul class="tier-list">
+              <li><i class="ri-check-line" aria-hidden="true"></i>Up to 10 live workflows</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Everything in Standard</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Up to 3 hours of small changes a month</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>A 30-minute review every quarter to find the next thing worth automating</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Reply the same evening on working days</li>
+              <li><i class="ri-check-line" aria-hidden="true"></i>Extra hours at £60 an hour</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="support-rules reveal">
+          <li><i class="ri-information-line" aria-hidden="true"></i><span>A workflow is one job you can name, such as "enquiry to quote" or "missed-call text-back". More than 10, or a new build every month? I'll quote for it.</span></li>
+          <li><i class="ri-information-line" aria-hidden="true"></i><span>Rolling monthly, no lock-in. It starts after the 30 days of support included in every build. Unused hours do not roll over. Extra hours are billed in 30-minute blocks.</span></li>
+          <li><i class="ri-information-line" aria-hidden="true"></i><span>Your tools stay on your own accounts, and you pay their running costs directly (for example phone numbers, SMS and software plans). No VAT is added to my prices.</span></li>
+          <li><i class="ri-information-line" aria-hidden="true"></i><span>Founding rate: the first 5 businesses to sign up keep these prices. They are reviewed once a year, and any rise is capped at UK inflation (CPI).</span></li>
+          <li><i class="ri-information-line" aria-hidden="true"></i><span>Full details in the <a href="terms.html#support">terms</a>.</span></li>
+        </ul>
+
+      </div>
+    </section>
+
     <!-- ===== SECTION 7: BOOK THE AUDIT ===== -->
     <section class="book-audit section-pad" id="book" aria-labelledby="book-h2">
       <div class="noise-layer" aria-hidden="true"></div>
@@ -1028,16 +1111,20 @@
               </div>
             </div>
 
-            <p class="pricing-line" id="pricing-line">Builds: typically £500 – £2,500, fixed price, quoted after the call. Optional monthly support afterwards.</p>
+            <p class="pricing-line" id="pricing-line">Builds: typically £500 – £2,500, fixed price, quoted after the call. Optional <a href="#support">monthly support</a> afterwards: from £79 a month, no lock-in.</p>
 
             <div class="contact-list">
               <a href="mailto:hello@bizautomations.co.uk" class="contact-item">
                 <i class="ri-mail-line" aria-hidden="true"></i>
                 hello@bizautomations.co.uk
               </a>
-              <a href="tel:07921134060" class="contact-item">
+              <a href="tel:+447565345786" class="contact-item">
                 <i class="ri-phone-line" aria-hidden="true"></i>
-                07921 134 060
+                07565 345 786
+              </a>
+              <a href="https://wa.me/447565345786" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                WhatsApp 07565 345 786
               </a>
               <a href="https://www.linkedin.com/in/tomasz-gorecki-825b3784/" target="_blank" rel="noopener noreferrer" class="contact-item">
                 <i class="ri-linkedin-box-line" aria-hidden="true"></i>
@@ -1107,7 +1194,7 @@
   <footer>
     <div class="footer-inner">
       <p>© 2026 BizAutomations · Kent, England</p>
-      <p><a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a></p>
+      <p><a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a> · <a href="tel:+447565345786">07565 345 786</a> · <a href="https://wa.me/447565345786" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <span aria-hidden="true">·</span>
