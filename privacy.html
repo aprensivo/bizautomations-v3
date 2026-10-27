@@ -5,41 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | BizAutomations</title>
   <meta name="robots" content="noindex">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <style>
-    :root {
-      --navy: #081D34; --sand: #F5F3E6; --orange: #FF4F00;
-      --charcoal: #1D1C1D; --white: #FCFCFD;
-      --font-head: 'DM Sans', sans-serif;
-      --font-body: 'Source Sans 3', sans-serif;
+    /* Same look as index.html. Fonts are self-hosted. */
+    @font-face {
+      font-family: "Archivo";
+      src: url("assets/fonts/archivo-latin.woff2") format("woff2");
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--charcoal); background: var(--sand); -webkit-font-smoothing: antialiased; }
-    .topbar { background: var(--navy); padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .wordmark { font-family: var(--font-head); font-weight: 700; font-size: 18px; color: var(--white); text-decoration: none; }
-    .back-link { font-family: var(--font-body); font-size: 15px; color: rgba(252,252,253,0.78); text-decoration: none; }
-    .back-link:hover { color: var(--white); }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
-    h1 { font-family: var(--font-head); font-size: 2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-    .updated { font-size: 15px; color: rgba(29,28,29,0.55); margin-bottom: 48px; }
-    h2 { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; color: var(--charcoal); margin: 36px 0 12px; }
-    p { margin-bottom: 16px; }
-    ul { margin: 0 0 16px 24px; }
+    :root {
+      --paper: #F1F1EE; --paper-2: #E5E5E0; --ink: #111316; --ink-soft: #4A4E55;
+      --orange: #FF4F00; --orange-press: #E04500; --canary: #F5D547;
+      --margin: clamp(16px, 4vw, 56px);
+      --ease-out: cubic-bezier(.2,.7,.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Archivo", system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    a:hover { text-decoration-color: var(--orange); }
+    ::selection { background: var(--canary); color: var(--ink); }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .wrap { padding-inline: var(--margin); max-width: 1600px; margin-inline: auto; }
+
+    .nav { position: sticky; top: 0; z-index: 50; background: var(--paper); }
+    .nav-inner { display: flex; align-items: center; gap: 24px; height: 72px; }
+    .wordmark { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-stretch: 72%; font-size: 1.625rem; letter-spacing: -0.02em; text-decoration: none; }
+    .wordmark svg { flex: none; width: auto; height: 30px; }
+    .back { margin-left: auto; font-weight: 600; font-size: 1rem; text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+    .btn { display: inline-flex; align-items: center; gap: .6em; background: var(--orange); color: var(--ink); font-weight: 700; font-size: 1.0625rem; text-decoration: none; padding: 14px 22px; transition: background-color .16s; }
+    .btn:hover { background: var(--orange-press); }
+    @media (max-width: 600px) { .btn { display: none; } }
+
+    main { padding-block: clamp(56px, 8vw, 112px) clamp(80px, 10vw, 144px); }
+    main > * { max-width: 68ch; }
+    h1, h2 { margin: 0; font-weight: 800; font-stretch: 72%; letter-spacing: -0.02em; line-height: 0.95; }
+    h1 { font-size: clamp(2.75rem, 7vw, 5rem); }
+    .updated { margin: 16px 0 48px; color: var(--ink-soft); font-size: .9375rem; }
+    h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 48px 0 14px; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 24px; }
     li { margin-bottom: 6px; }
-    a { color: var(--orange); }
-    footer { background: #080808; padding: 32px 20px; text-align: center; font-family: var(--font-body); font-size: 15px; color: rgba(252,252,253,0.78); }
+
+    footer { background: var(--orange); color: var(--ink); padding: 72px 0 32px; overflow: hidden; }
+    .footer-name { font-weight: 800; font-stretch: 62%; font-size: min(18.4vw, 288px); line-height: .8; letter-spacing: -0.03em; margin: 0; white-space: nowrap; }
+    .footer-row { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 40px; font-weight: 600; }
+    .footer-row a { text-decoration: none; }
+    .footer-row a:hover { text-decoration: underline; }
+    .footer-row .end { margin-left: auto; display: flex; gap: 24px; }
+    @media (max-width: 900px) { .footer-row .end { margin-left: 0; } }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <a href="/" class="wordmark">BizAutomations</a>
-    <a href="/" class="back-link">← Back to site</a>
-  </div>
+  <header class="nav">
+    <nav class="wrap nav-inner" aria-label="Main navigation">
+      <a href="/" class="wordmark" aria-label="BizAutomations, home"><svg viewBox="8 2 312 448" fill="none" aria-hidden="true"><path d="M48 326V28H176A96 96 0 0 1 176 220H197A96 96 0 0 1 197 412H133M48 220H197" stroke="currentColor" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/><circle cx="47" cy="411" r="37" fill="#FF4F00"/></svg>BizAutomations</a>
+      <a href="/" class="back">← Back to site</a>
+      <a href="/#book" class="btn">Book audit <span aria-hidden="true">→</span></a>
+    </nav>
+  </header>
 
-  <main>
+  <main class="wrap">
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: October 2026</p>
 
@@ -90,6 +122,16 @@
     <p>Questions about this policy: <a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a></p>
   </main>
 
-  <footer>© 2026 BizAutomations · Kent, England</footer>
+  <footer>
+    <div class="wrap">
+      <p class="footer-name" aria-hidden="true">BizAutomations</p>
+      <div class="footer-row">
+        <span>© 2026 BizAutomations · Kent, England</span>
+        <a href="mailto:hello@bizautomations.co.uk">hello@bizautomations.co.uk</a>
+        <a href="tel:+447565345786">07565 345 786</a>
+        <span class="end"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
